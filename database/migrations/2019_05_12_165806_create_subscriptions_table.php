@@ -16,8 +16,7 @@ class CreateSubscriptionsTable extends Migration
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('subscriber_id');
-            $table->unsignedInteger('status_id');
-            $table->string('confirmationCode');
+            $table->enum('status', ['created', 'confirmed', 'deleted']);
             $table->timestamps();
         });
     }

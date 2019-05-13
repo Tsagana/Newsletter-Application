@@ -17,6 +17,7 @@ class CreateSubscribersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
+            $table->string('token');
             $table->timestamps();
         });
     }
