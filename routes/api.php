@@ -18,8 +18,7 @@ use App\Subscription;
     Route::post('subscriptions', 'SubscriptionController@create');
 
     //Confirm subscription
-    Route::put('subscriptions/{subscription}', 'SubscriptionController@confirm');
+    Route::put('subscriptions/confirm', 'SubscriptionController@confirm');
 
     //Delete subscription
     Route::delete('subscriptions/{subscription}', 'SubscriptionController@delete');
-
