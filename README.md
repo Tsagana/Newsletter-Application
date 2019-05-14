@@ -45,3 +45,17 @@ $ cp .env.example .env
 ```bash
 $ php artisan migrate
 ```
+
+Test info:
+1. Create new subscription:
+	Send POST request to http://hostname/newsletter/api/subscriptions
+	Parameters: name, email
+2. Confirm new subcription:
+	Send PUT request to http://localhost/newsletter/api/subscriptions/confirm
+	Parameters: token
+3. Delete subscription:
+	Send DELETE request to http://localhost/newsletter/api/subscriptions/{id}
+	No additional parameters needed
+4. Get subscriptions:
+	Send GET request to http://hostname/newsletter/api/subscriptions to retrieve all existing subscriptions
+	Send GET request to http://hostname/newsletter/api/subscriptions/{id} to retrieve exact subscription by id
